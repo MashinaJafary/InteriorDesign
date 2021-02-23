@@ -13,11 +13,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int selectedIndex = 0;
+  //int selectedIndex = 0;
+  int selectedPage = 0;
 
   void onItemTapped(int index) {
     setState(() {
-      selectedIndex = index;
+      selectedPage = index;
     });
   }
 
@@ -67,8 +68,36 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
+      body: Center(
+        // padding: EdgeInsets.all(16.0),
+        child: GridView.extent(
+          maxCrossAxisExtent: 200,
+          crossAxisSpacing: 4.0,
+          mainAxisSpacing: 4.0,
+          children: <Widget>[
+            Image.asset("assets/house-method-CqVHT8g45R8-unsplash.jpg"),
+            Image.asset(
+              "assets/anwar-hakim-rqCW58uo0uw-unsplash.jpg",
+              // width: 160,
+              //height: 10,
+              fit: BoxFit.cover,
+            ),
+            Image.asset(
+              "assets/lauren-haden-V3rewXkHo94-unsplash.jpg",
+              // width: 160,
+              // height: 200,
+              fit: BoxFit.cover,
+            ),
+            Image.asset("assets/house-method-CqVHT8g45R8-unsplash.jpg"),
+            Image.asset("assets/bath1.jpg"),
+            Image.asset("assets/bath2.jpg"),
+            Image.asset("assets/bath3.jpg"),
+            Image.asset("assets/bath4.jpg"),
+          ],
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
@@ -78,9 +107,25 @@ class _HomePageState extends State<HomePage> {
             label: 'About Us',
           )
         ],
-        currentIndex: selectedIndex,
+        currentIndex: selectedPage,
         selectedItemColor: Colors.amber[800],
         onTap: onItemTapped,
+      ),
+    );
+  }
+}
+
+class AboutUsPage extends StatefulWidget {
+  @override
+  _AboutUsPageState createState() => _AboutUsPageState();
+}
+
+class _AboutUsPageState extends State<AboutUsPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('About Us'),
       ),
     );
   }
