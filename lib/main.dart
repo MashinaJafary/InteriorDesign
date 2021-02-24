@@ -1,4 +1,5 @@
 import 'package:InteriorDesign/bed_room_page.dart';
+import 'package:InteriorDesign/detail_page.dart';
 import 'package:InteriorDesign/wash_room_page.dart';
 import 'package:InteriorDesign/sitting_room_page.dart';
 import 'package:InteriorDesign/kitchen_page.dart';
@@ -96,11 +97,17 @@ class _HomePageState extends State<HomePage> {
           SizedBox(
             height: 30,
           ),
-          Container(
-            width: double.infinity,
-            height: 240,
-            decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage("assets/bed1.jpg"))),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => DetailPage()));
+            },
+            child: Container(
+              width: double.infinity,
+              height: 240,
+              decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage("assets/bed1.jpg"))),
+            ),
           ),
           SizedBox(
             height: 20,
