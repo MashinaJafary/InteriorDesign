@@ -18,7 +18,7 @@ class SplashScreenPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SplashScreen(
-      seconds: 10,
+      seconds: 5,
       navigateAfterSeconds: new HomePage(),
       backgroundColor: Colors.amber[50],
       title: new Text(
@@ -29,7 +29,7 @@ class SplashScreenPage extends StatelessWidget {
         "assets/mashina.jpg",
       ),
       loadingText: Text("Loading"),
-      photoSize: 150.0,
+      photoSize: 50.0,
       loaderColor: Colors.red,
     );
   }
