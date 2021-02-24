@@ -1,3 +1,7 @@
+import 'package:InteriorDesign/bed_room_page.dart';
+import 'package:InteriorDesign/wash_room_page.dart';
+import 'package:InteriorDesign/sitting_room_page.dart';
+import 'package:InteriorDesign/kitchen_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -46,22 +50,34 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(color: Colors.amber[800]),
             ),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => KitchenPage()));
+              },
               leading: Icon(Icons.kitchen),
               title: Text("Kitchen Design"),
             ),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => BedRoomPage()));
+              },
               leading: Icon(Icons.king_bed),
               title: Text("Bedroom Design"),
             ),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => WashRoomPage()));
+              },
               leading: Icon(Icons.wash_rounded),
               title: Text("Washroom Design"),
             ),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => SittingRoomPage()));
+              },
               leading: Icon(Icons.charging_station_rounded),
               title: Text("Sitting Room Design"),
             )
@@ -153,22 +169,6 @@ class _HomePageState extends State<HomePage> {
         currentIndex: selectedPage,
         selectedItemColor: Colors.amber[800],
         onTap: onItemTapped,
-      ),
-    );
-  }
-}
-
-class AboutUsPage extends StatefulWidget {
-  @override
-  _AboutUsPageState createState() => _AboutUsPageState();
-}
-
-class _AboutUsPageState extends State<AboutUsPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('About Us'),
       ),
     );
   }
