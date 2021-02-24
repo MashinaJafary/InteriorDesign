@@ -1,3 +1,5 @@
+//import 'dart:async';
+import 'package:splashscreen/splashscreen.dart';
 import 'package:InteriorDesign/bed_room_page.dart';
 import 'package:InteriorDesign/detail_page.dart';
 import 'package:InteriorDesign/wash_room_page.dart';
@@ -8,8 +10,29 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: HomePage(),
+    home: SplashScreenPage(),
   ));
+}
+
+class SplashScreenPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SplashScreen(
+      seconds: 10,
+      navigateAfterSeconds: new HomePage(),
+      backgroundColor: Colors.amber[50],
+      title: new Text(
+        'Mashina',
+        textScaleFactor: 2,
+      ),
+      image: Image.asset(
+        "assets/mashina.jpg",
+      ),
+      loadingText: Text("Loading"),
+      photoSize: 150.0,
+      loaderColor: Colors.red,
+    );
+  }
 }
 
 class HomePage extends StatefulWidget {
