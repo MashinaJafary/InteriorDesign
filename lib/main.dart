@@ -68,33 +68,76 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      body: Center(
-        // padding: EdgeInsets.all(16.0),
-        child: GridView.extent(
-          maxCrossAxisExtent: 200,
-          crossAxisSpacing: 4.0,
-          mainAxisSpacing: 4.0,
-          children: <Widget>[
-            Image.asset("assets/house-method-CqVHT8g45R8-unsplash.jpg"),
-            Image.asset(
-              "assets/anwar-hakim-rqCW58uo0uw-unsplash.jpg",
-              // width: 160,
-              //height: 10,
-              fit: BoxFit.cover,
-            ),
-            Image.asset(
-              "assets/lauren-haden-V3rewXkHo94-unsplash.jpg",
-              // width: 160,
-              // height: 200,
-              fit: BoxFit.cover,
-            ),
-            Image.asset("assets/house-method-CqVHT8g45R8-unsplash.jpg"),
-            Image.asset("assets/bath1.jpg"),
-            Image.asset("assets/bath2.jpg"),
-            Image.asset("assets/bath3.jpg"),
-            Image.asset("assets/bath4.jpg"),
-          ],
-        ),
+      body: ListView(
+        children: [
+          SizedBox(
+            height: 10.0,
+          ),
+          Text(
+            "Popular Designs",
+            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Container(
+            width: double.infinity,
+            height: 240,
+            decoration: BoxDecoration(
+                image: DecorationImage(image: AssetImage("assets/bed1.jpg"))),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Row(
+            children: [
+              Column(
+                children: [
+                  Container(
+                    width: 180,
+                    height: 200,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                            image: AssetImage("assets/bath1.jpg"),
+                            fit: BoxFit.cover)),
+                  ),
+                  Container(
+                    width: 180,
+                    height: 200,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                            image: AssetImage("assets/bath2.jpg"),
+                            fit: BoxFit.cover)),
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  Container(
+                    width: 180,
+                    height: 200,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                            image: AssetImage("assets/bed2.jpg"),
+                            fit: BoxFit.cover)),
+                  ),
+                  Container(
+                    width: 180,
+                    height: 200,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                            image: AssetImage("assets/bed3.jpg"),
+                            fit: BoxFit.cover)),
+                  ),
+                ],
+              )
+            ],
+          )
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
