@@ -22,11 +22,11 @@ class SplashScreenPage extends StatelessWidget {
       navigateAfterSeconds: new HomePage(),
       backgroundColor: Colors.amber[50],
       title: new Text(
-        'Mashina',
+        'Virtual Interior Design',
         textScaleFactor: 2,
       ),
       image: Image.asset(
-        "assets/mashina.jpg",
+        "assets/ViDALogo.png",
       ),
       loadingText: Text("Loading"),
       photoSize: 50.0,
