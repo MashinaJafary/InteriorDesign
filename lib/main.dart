@@ -139,45 +139,69 @@ class _HomePageState extends State<HomePage> {
             children: [
               Column(
                 children: [
-                  Container(
-                    width: 180,
-                    height: 200,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/bath1.jpg"),
-                            fit: BoxFit.cover)),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (_) => DetailPage()));
+                    },
+                    child: Container(
+                      width: 180,
+                      height: 200,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                              image: AssetImage("assets/bath1.jpg"),
+                              fit: BoxFit.cover)),
+                    ),
                   ),
-                  Container(
-                    width: 180,
-                    height: 200,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/bath2.jpg"),
-                            fit: BoxFit.cover)),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (_) => DetailPage()));
+                    },
+                    child: Container(
+                      width: 180,
+                      height: 200,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                              image: AssetImage("assets/bath2.jpg"),
+                              fit: BoxFit.cover)),
+                    ),
                   ),
                 ],
               ),
               Column(
                 children: [
-                  Container(
-                    width: 180,
-                    height: 200,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/bed2.jpg"),
-                            fit: BoxFit.cover)),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (_) => DetailPage()));
+                    },
+                    child: Container(
+                      width: 180,
+                      height: 200,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                              image: AssetImage("assets/bed2.jpg"),
+                              fit: BoxFit.cover)),
+                    ),
                   ),
-                  Container(
-                    width: 180,
-                    height: 200,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/bed3.jpg"),
-                            fit: BoxFit.cover)),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (_) => DetailPage()));
+                    },
+                    child: Container(
+                      width: 180,
+                      height: 200,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                              image: AssetImage("assets/bed3.jpg"),
+                              fit: BoxFit.cover)),
+                    ),
                   ),
                 ],
               )
