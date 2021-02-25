@@ -30,7 +30,7 @@ class SplashScreenPage extends StatelessWidget {
       ),
       loadingText: Text("Loading"),
       photoSize: 50.0,
-      loaderColor: Colors.red,
+      loaderColor: Colors.amber[800],
     );
   }
 }
