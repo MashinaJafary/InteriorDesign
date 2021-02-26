@@ -1,4 +1,3 @@
-//import 'dart:async';
 import 'package:splashscreen/splashscreen.dart';
 import 'package:InteriorDesign/bed_room_page.dart';
 import 'package:InteriorDesign/detail_page.dart';
@@ -41,7 +40,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  //int selectedIndex = 0;
   int selectedPage = 0;
 
   void onItemTapped(int index) {
@@ -115,6 +113,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Text(
             "Popular Designs",
+            textAlign: TextAlign.center,
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
           SizedBox(
@@ -217,7 +216,7 @@ class _HomePageState extends State<HomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_box),
-            label: 'About Us',
+            label: 'Top Designers',
           )
         ],
         currentIndex: selectedPage,

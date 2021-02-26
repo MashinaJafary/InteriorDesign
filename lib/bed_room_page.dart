@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:InteriorDesign/main.dart';
 import 'package:InteriorDesign/detail_page.dart';
 import 'package:InteriorDesign/wash_room_page.dart';
 import 'package:InteriorDesign/sitting_room_page.dart';
@@ -44,18 +45,18 @@ class _BedRoomPageState extends State<BedRoomPage> {
             ListTile(
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => KitchenPage()));
+                    context, MaterialPageRoute(builder: (_) => HomePage()));
               },
-              leading: Icon(Icons.kitchen),
-              title: Text("Kitchen Design"),
+              leading: Icon(Icons.home_rounded),
+              title: Text("Home"),
             ),
             ListTile(
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => BedRoomPage()));
+                    context, MaterialPageRoute(builder: (_) => KitchenPage()));
               },
-              leading: Icon(Icons.king_bed),
-              title: Text("Bedroom Design"),
+              leading: Icon(Icons.kitchen),
+              title: Text("Kitchen Design"),
             ),
             ListTile(
               onTap: () {
@@ -83,6 +84,7 @@ class _BedRoomPageState extends State<BedRoomPage> {
           ),
           Text(
             "Bed Designs",
+            textAlign: TextAlign.center,
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
           SizedBox(
@@ -191,7 +193,7 @@ class _BedRoomPageState extends State<BedRoomPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_box),
-            label: 'About Us',
+            label: 'Top Designers',
           )
         ],
         currentIndex: selectedPage,

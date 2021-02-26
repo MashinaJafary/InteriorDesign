@@ -1,3 +1,4 @@
+import 'package:InteriorDesign/main.dart';
 import 'package:flutter/material.dart';
 import 'package:InteriorDesign/bed_room_page.dart';
 import 'package:InteriorDesign/detail_page.dart';
@@ -44,6 +45,14 @@ class _WashRoomPageState extends State<WashRoomPage> {
             ListTile(
               onTap: () {
                 Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => HomePage()));
+              },
+              leading: Icon(Icons.home_rounded),
+              title: Text("Home"),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(
                     context, MaterialPageRoute(builder: (_) => KitchenPage()));
               },
               leading: Icon(Icons.kitchen),
@@ -56,14 +65,6 @@ class _WashRoomPageState extends State<WashRoomPage> {
               },
               leading: Icon(Icons.king_bed),
               title: Text("Bedroom Design"),
-            ),
-            ListTile(
-              onTap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => WashRoomPage()));
-              },
-              leading: Icon(Icons.wash_rounded),
-              title: Text("Washroom Design"),
             ),
             ListTile(
               onTap: () {
@@ -83,6 +84,7 @@ class _WashRoomPageState extends State<WashRoomPage> {
           ),
           Text(
             "Washroom Designs",
+            textAlign: TextAlign.center,
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
           SizedBox(
@@ -191,7 +193,7 @@ class _WashRoomPageState extends State<WashRoomPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_box),
-            label: 'About Us',
+            label: 'Top Designers',
           )
         ],
         currentIndex: selectedPage,

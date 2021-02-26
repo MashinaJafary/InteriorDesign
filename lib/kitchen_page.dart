@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:InteriorDesign/main.dart';
 import 'package:InteriorDesign/bed_room_page.dart';
 import 'package:InteriorDesign/detail_page.dart';
 import 'package:InteriorDesign/wash_room_page.dart';
@@ -44,10 +45,10 @@ class _KitchenPageState extends State<KitchenPage> {
             ListTile(
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => KitchenPage()));
+                    context, MaterialPageRoute(builder: (_) => HomePage()));
               },
-              leading: Icon(Icons.kitchen),
-              title: Text("Kitchen Design"),
+              leading: Icon(Icons.home_rounded),
+              title: Text("Home"),
             ),
             ListTile(
               onTap: () {
@@ -83,6 +84,7 @@ class _KitchenPageState extends State<KitchenPage> {
           ),
           Text(
             "Kitchen Designs",
+            textAlign: TextAlign.center,
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
           SizedBox(
@@ -192,7 +194,7 @@ class _KitchenPageState extends State<KitchenPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_box),
-            label: 'About Us',
+            label: 'Top Designers',
           )
         ],
         currentIndex: selectedPage,
