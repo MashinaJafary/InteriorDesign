@@ -161,7 +161,7 @@ class _KitchenPageState extends State<KitchenPage> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("assets/bed3.jpg"),
+                              image: AssetImage("assets/kitchen3.jpg"),
                               fit: BoxFit.cover)),
                     ),
                   ),
@@ -176,7 +176,7 @@ class _KitchenPageState extends State<KitchenPage> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("assets/bed1.jpg"),
+                              image: AssetImage("assets/kitchen4.jpg"),
                               fit: BoxFit.cover)),
                     ),
                   ),

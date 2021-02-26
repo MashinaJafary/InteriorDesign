@@ -164,7 +164,7 @@ class _HomePageState extends State<HomePage> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("assets/bath2.jpg"),
+                              image: AssetImage("assets/kitchen1.jpg"),
                               fit: BoxFit.cover)),
                     ),
                   ),
@@ -183,7 +183,7 @@ class _HomePageState extends State<HomePage> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("assets/bed2.jpg"),
+                              image: AssetImage("assets/sit1.jpg"),
                               fit: BoxFit.cover)),
                     ),
                   ),
@@ -198,7 +198,7 @@ class _HomePageState extends State<HomePage> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("assets/bed3.jpg"),
+                              image: AssetImage("assets/kitchen4.jpg"),
                               fit: BoxFit.cover)),
                     ),
                   ),

@@ -99,7 +99,8 @@ class _WashRoomPageState extends State<WashRoomPage> {
               width: double.infinity,
               height: 240,
               decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage("assets/bed4.jpg"))),
+                  image:
+                      DecorationImage(image: AssetImage("assets/bath4.jpg"))),
             ),
           ),
           SizedBox(
@@ -140,7 +141,7 @@ class _WashRoomPageState extends State<WashRoomPage> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             image: DecorationImage(
-                                image: AssetImage("assets/bed4.jpg"),
+                                image: AssetImage("assets/bath4.jpg"),
                                 fit: BoxFit.cover)),
                       ),
                     ),
@@ -160,7 +161,7 @@ class _WashRoomPageState extends State<WashRoomPage> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("assets/bed3.jpg"),
+                              image: AssetImage("assets/bath3.jpg"),
                               fit: BoxFit.cover)),
                     ),
                   ),
@@ -175,7 +176,7 @@ class _WashRoomPageState extends State<WashRoomPage> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("assets/bed1.jpg"),
+                              image: AssetImage("assets/bath1.jpg"),
                               fit: BoxFit.cover)),
                     ),
                   ),

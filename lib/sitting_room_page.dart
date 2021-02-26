@@ -99,7 +99,7 @@ class _SittingRoomPageState extends State<SittingRoomPage> {
               width: double.infinity,
               height: 240,
               decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage("assets/bed1.jpg"))),
+                  image: DecorationImage(image: AssetImage("assets/sit4.jpg"))),
             ),
           ),
           SizedBox(
@@ -120,7 +120,7 @@ class _SittingRoomPageState extends State<SittingRoomPage> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("assets/bath1.jpg"),
+                              image: AssetImage("assets/sit3.jpg"),
                               fit: BoxFit.cover)),
                     ),
                   ),
@@ -135,7 +135,7 @@ class _SittingRoomPageState extends State<SittingRoomPage> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("assets/bath2.jpg"),
+                              image: AssetImage("assets/sit2.jpg"),
                               fit: BoxFit.cover)),
                     ),
                   ),
@@ -154,7 +154,7 @@ class _SittingRoomPageState extends State<SittingRoomPage> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("assets/bed2.jpg"),
+                              image: AssetImage("assets/sit2.jpg"),
                               fit: BoxFit.cover)),
                     ),
                   ),
@@ -169,7 +169,7 @@ class _SittingRoomPageState extends State<SittingRoomPage> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("assets/bed3.jpg"),
+                              image: AssetImage("assets/sit3.jpg"),
                               fit: BoxFit.cover)),
                     ),
                   ),
