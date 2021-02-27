@@ -1,45 +1,16 @@
-import 'package:splashscreen/splashscreen.dart';
+import 'package:InteriorDesign/main.dart';
+import 'package:flutter/material.dart';
 import 'package:InteriorDesign/bed_room_page.dart';
 import 'package:InteriorDesign/detail_page.dart';
-import 'package:InteriorDesign/wash_room_page.dart';
 import 'package:InteriorDesign/sitting_room_page.dart';
 import 'package:InteriorDesign/kitchen_page.dart';
-import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: SplashScreenPage(),
-  ));
-}
-
-class SplashScreenPage extends StatelessWidget {
+class WashRoomPage extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return SplashScreen(
-      seconds: 5,
-      navigateAfterSeconds: new HomePage(),
-      backgroundColor: Colors.amber[50],
-      title: new Text(
-        'Virtual Interior Design',
-        textScaleFactor: 2,
-      ),
-      image: Image.asset(
-        "assets/ViDALogo.png",
-      ),
-      loadingText: Text("Loading"),
-      photoSize: 50.0,
-      loaderColor: Colors.amber[800],
-    );
-  }
+  _WashRoomPageState createState() => _WashRoomPageState();
 }
 
-class HomePage extends StatefulWidget {
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
+class _WashRoomPageState extends State<WashRoomPage> {
   int selectedPage = 0;
 
   void onItemTapped(int index) {
@@ -74,6 +45,14 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               onTap: () {
                 Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => HomePage()));
+              },
+              leading: Icon(Icons.home_rounded),
+              title: Text("Home"),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(
                     context, MaterialPageRoute(builder: (_) => KitchenPage()));
               },
               leading: Icon(Icons.kitchen),
@@ -86,14 +65,6 @@ class _HomePageState extends State<HomePage> {
               },
               leading: Icon(Icons.king_bed),
               title: Text("Bedroom Design"),
-            ),
-            ListTile(
-              onTap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => WashRoomPage()));
-              },
-              leading: Icon(Icons.wash_rounded),
-              title: Text("Washroom Design"),
             ),
             ListTile(
               onTap: () {
@@ -112,7 +83,7 @@ class _HomePageState extends State<HomePage> {
             height: 10.0,
           ),
           Text(
-            "Popular Designs",
+            "Washroom Designs",
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
@@ -128,7 +99,8 @@ class _HomePageState extends State<HomePage> {
               width: double.infinity,
               height: 240,
               decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage("assets/bed1.jpg"))),
+                  image:
+                      DecorationImage(image: AssetImage("assets/bath4.jpg"))),
             ),
           ),
           SizedBox(
@@ -136,39 +108,45 @@ class _HomePageState extends State<HomePage> {
           ),
           Row(
             children: [
-              Column(
-                children: [
-                  InkWell(
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (_) => DetailPage()));
-                    },
-                    child: Container(
-                      width: 180,
-                      height: 200,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          image: DecorationImage(
-                              image: AssetImage("assets/bath1.jpg"),
-                              fit: BoxFit.cover)),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => DetailPage()));
+                },
+                child: Column(
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (_) => DetailPage()));
+                      },
+                      child: Container(
+                        width: 180,
+                        height: 200,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: DecorationImage(
+                                image: AssetImage("assets/bath1.jpg"),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (_) => DetailPage()));
-                    },
-                    child: Container(
-                      width: 180,
-                      height: 200,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          image: DecorationImage(
-                              image: AssetImage("assets/kitchen1.jpg"),
-                              fit: BoxFit.cover)),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (_) => DetailPage()));
+                      },
+                      child: Container(
+                        width: 180,
+                        height: 200,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: DecorationImage(
+                                image: AssetImage("assets/bath4.jpg"),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               Column(
                 children: [
@@ -183,7 +161,7 @@ class _HomePageState extends State<HomePage> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("assets/sit1.jpg"),
+                              image: AssetImage("assets/bath3.jpg"),
                               fit: BoxFit.cover)),
                     ),
                   ),
@@ -198,7 +176,7 @@ class _HomePageState extends State<HomePage> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage("assets/kitchen4.jpg"),
+                              image: AssetImage("assets/bath1.jpg"),
                               fit: BoxFit.cover)),
                     ),
                   ),
